@@ -14,16 +14,12 @@ RUN apt-get -y install \
 
 RUN apt-get install ca-certificates
 
-RUN pip3 install \
-  bigsuds \
-  f5-icontrol-rest \
-  f5-sdk
 
 # Ansible specific environment variables
 ENV ANSIBLE_HOST_KEY_CHECKING="False" \
     ANSIBLE_LIBRARY="/ansible/library" \
     ANSIBLE_RETRY_FILES_ENABLED="False" \
-    INTERPRETER_PYTHON="/usr/bin/python2.7" \
+    INTERPRETER_PYTHON="/usr/bin/python3" \
     PATH="/ansible/bin:$PATH" \
     PYTHONPATH="/ansible/lib"
 
