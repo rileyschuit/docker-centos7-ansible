@@ -14,6 +14,10 @@ RUN apt-get -y install \
 
 RUN apt-get install ca-certificates
 
+RUN pip3 install \
+  bigsuds \
+  f5-icontrol-rest \
+  f5-sdk
 
 # Ansible specific environment variables
 ENV ANSIBLE_HOST_KEY_CHECKING="False" \
