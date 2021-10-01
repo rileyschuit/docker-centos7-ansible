@@ -44,7 +44,7 @@ ENV YUM_PACKAGES_2 \
 # - pip must be upgraded from 8.1.2 or else later module installs fail.
 ENV PIP_PACKAGES_1 \
     pip \
-    setuptools<45
+    setuptools
 
 ENV PIP_PACKAGES_2 \
     ansible==${ANSIBLE_VERSION} \
